@@ -6,9 +6,9 @@
 
 var config = {
 	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses.
+	ipWhitelist: [], // Set [] to allow all IP addresses.
 
-	language: "en",
+	language: "pt",
 	timeFormat: 24,
 	units: "metric",
 
@@ -26,13 +26,13 @@ var config = {
 		},
 		{
 			module: "calendar",
-			header: "US Holidays",
+			header: "PT Holidays",
 			position: "top_left",
 			config: {
 				calendars: [
 					{
 						symbol: "calendar-check-o ",
-						url: "webcal://www.calendarlabs.com/templates/ical/US-Holidays.ics"
+						url: "webcal://www.calendarlabs.com/templates/ical/PT-Holidays.ics"
 					}
 				]
 			}
@@ -45,9 +45,9 @@ var config = {
 			module: "currentweather",
 			position: "top_right",
 			config: {
-				location: "New York",
-				locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Lisbon",
+				locationID: "2267057",  //ID from http://www.openweathermap.org/help/city_list.txt
+				appid: "0d64e3b68bc80f52567ed320d6b23158"
 			}
 		},
 		{
@@ -55,9 +55,9 @@ var config = {
 			position: "top_right",
 			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				location: "Lisbon",
+				locationID: "2267057",  //ID from http://www.openweathermap.org/help/city_list.txt
+				appid: "0d64e3b68bc80f52567ed320d6b23158"
 			}
 		},
 		{
@@ -66,8 +66,8 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "A Bola",
+						url: "http://www.abola.pt/"
 					}
 				],
 				showSourceTitle: true,
